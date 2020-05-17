@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Sports</string>
+
+
+    <!-- Team List Activity -->
+    <string name="tv_default_league">Spanish La Liga</string>
+    <string name="tv_lbl_change_league"><u>Cambiar de liga</u></string>
+
+    <!-- Toolbar -->
+    <string name="ht_search_bar">Busca una liga</string>
+    <string name="tv_leagues">Ligas disponibles</string>
+
+    <!-- Team Detail Activity -->
+    <string name="tv_lbl_events">Próximos eventos</string>
+
+    <!-- General -->
+    <string name="an_error_occurred">Ocurrió un error</string>
+
+</resources>

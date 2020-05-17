@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:elevation="1dp"
+        android:src="@android:drawable/ic_delete"
+        android:tint="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ly_team_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_team_background"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:padding="24dp"
+                android:scaleType="fitXY"
+                app:layout_constraintDimensionRatio="H,2:1.5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_badge"
+                android:layout_width="136dp"
+                android:layout_height="136dp"
+                android:layout_marginStart="36dp"
+                android:elevation="2dp"
+                android:translationY="36dp"
+                app:cardCornerRadius="68dp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_team_background"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_team_badge"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:padding="24dp"
+                    android:scaleType="fitXY"
+                    tools:ignore="ContentDescription" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <ImageView
+                android:id="@+id/iv_facebook"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/ic_facebook"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_team_name"
+                tools:ignore="ContentDescription" />
+
+
+            <ImageView
+                android:id="@+id/iv_twitter"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_twitter"
+                app:layout_constraintBottom_toBottomOf="@id/iv_facebook"
+                app:layout_constraintEnd_toStartOf="@id/iv_facebook"
+                app:layout_constraintTop_toTopOf="@id/iv_facebook"
+                tools:ignore="ContentDescription" />
+
+
+            <ImageView
+                android:id="@+id/iv_web_site"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_web_site"
+                app:layout_constraintEnd_toStartOf="@id/iv_twitter"
+                app:layout_constraintTop_toTopOf="@id/iv_facebook"
+                tools:ignore="ContentDescription" />
+
+
+            <ImageView
+                android:id="@+id/iv_youtube"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_youtube"
+                app:layout_constraintBottom_toBottomOf="@id/iv_facebook"
+                app:layout_constraintEnd_toStartOf="@id/iv_web_site"
+                app:layout_constraintTop_toTopOf="@id/iv_facebook"
+                tools:ignore="ContentDescription" />
+
+
+            <ImageView
+                android:id="@+id/iv_instagram"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_instagram"
+                app:layout_constraintBottom_toBottomOf="@id/iv_facebook"
+                app:layout_constraintEnd_toStartOf="@id/iv_youtube"
+                app:layout_constraintTop_toTopOf="@id/iv_facebook"
+                tools:ignore="ContentDescription" />
+
+
+            <TextView
+                android:id="@+id/tv_team_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/card_badge"
+                app:layout_constraintTop_toBottomOf="@id/iv_team_background" />
+
+
+            <TextView
+                android:id="@+id/tv_lbl_events"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/tv_lbl_events"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/card_badge"
+                app:layout_constraintTop_toBottomOf="@id/iv_facebook" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_events"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/card_badge"
+                app:layout_constraintTop_toBottomOf="@id/tv_lbl_events" />
+
+
+            <TextView
+                android:id="@+id/tv_team_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="32dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@id/card_badge"
+                app:layout_constraintTop_toBottomOf="@id/rv_events" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_team_desc" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/layoutError"
+        layout="@layout/layout_error"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
